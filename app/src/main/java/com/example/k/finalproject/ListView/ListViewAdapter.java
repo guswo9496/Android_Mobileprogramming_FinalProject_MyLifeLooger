@@ -12,6 +12,7 @@ import android.widget.TextView;
  * Created by k on 2016-11-24.
  */
 import java.util.ArrayList;
+
 public class ListViewAdapter  {
     // Adapter에 추가된 데이터를 저장하기 위한 ArrayList
     private ArrayList<ListViewItem> listViewItemList = new ArrayList<ListViewItem>() ;
