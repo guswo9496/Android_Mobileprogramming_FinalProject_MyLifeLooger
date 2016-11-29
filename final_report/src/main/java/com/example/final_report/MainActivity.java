@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+
 
 public class MainActivity extends AppCompatActivity {
     MainActivity mainActivity = this;
@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.main_finish_btn).setOnClickListener(mainClickListener);
     }
 
+    //main의main버튼 실행
     Button.OnClickListener mainClickListener = new View.OnClickListener(){
 
         @Override
@@ -42,31 +43,11 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(main_Report_Intent);
                     break;
                 case R.id.main_finish_btn:
+                    moveTaskToBack(true);
                     finish();
+                    android.os.Process.killProcess(android.os.Process.myPid());
                     break;
             }
         }
     };
-    /*public void onClick(View view){
-        switch (view.getId()){
-            case R.id.task:
-                Intent intent1 = new Intent(MainActivity.this, TaskActivity.class);
-                startActivity(intent1);
-
-            case R.id.log:
-                Intent intent2 = new Intent(MainActivity.this, LogActivity.class);
-                startActivity(intent2);
-
-            case  R.id.map:
-                *//*textView.setText("map");*//*
-                break;
-            case R.id.report:
-                Intent intentreport = new Intent(MainActivity.this,ReportActivity.class);
-                startActivity(intentreport);
-
-            case R.id.finish:
-                finish();
-                break;
-        }
-    }*/
 }

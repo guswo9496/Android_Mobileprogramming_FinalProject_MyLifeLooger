@@ -11,11 +11,14 @@ import android.widget.TextView;
 
 public class LogActivity extends AppCompatActivity {
     LogActivity logActivity = this;
+    TextView textView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log);
+        textView=(TextView)findViewById(R.id.logtextview1);
 
+        //log의 스피너실행부
         final TextView logtv = (TextView)findViewById(R.id.logintenttexview);
         Spinner spinner = (Spinner)findViewById(R.id.logspinner1);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -23,24 +26,26 @@ public class LogActivity extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int TaskIndex, long id) {
                 logtv.setText("Log List : ");
                 switch (TaskIndex) {
+                    case 0:
+                        textView.setText(""+parent.getItemAtPosition(TaskIndex));
+                        break;
                     case 1:
-
+                        textView.setText(""+parent.getItemAtPosition(TaskIndex));
                         break;
                     case 2:
-
+                        textView.setText(""+parent.getItemAtPosition(TaskIndex));
                         break;
                     case 3:
-
+                        textView.setText(""+parent.getItemAtPosition(TaskIndex));
                         break;
                     case 4:
-
+                        textView.setText(""+parent.getItemAtPosition(TaskIndex));
                         break;
-
-                    case  5:
-
+                    case 5:
+                        textView.setText(""+parent.getItemAtPosition(TaskIndex));
                         break;
-
                     case 6:
+                        textView.setText(""+parent.getItemAtPosition(TaskIndex));
                         break;
                 }
             }
@@ -57,6 +62,7 @@ public class LogActivity extends AppCompatActivity {
         findViewById(R.id.logfinfish).setOnClickListener(L1ClickListener);
         findViewById(R.id.logmain).setOnClickListener(L1ClickListener);
     }
+    //log의 메인 버튼 실행
     Button.OnClickListener L1ClickListener = new View.OnClickListener(){
 
         @Override

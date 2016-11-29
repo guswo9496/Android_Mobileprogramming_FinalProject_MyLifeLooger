@@ -18,31 +18,35 @@ public class NewReportActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_report);
+        textView=(TextView)findViewById(R.id.reportTextview1);
         reporttv = (TextView) findViewById(R.id.goalview);
         spinner = (Spinner)findViewById(R.id.reportspinner1);
+        //스피너 실행부
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int TaskIndex, long id) {
                 reporttv.setText("Report List : ");
                 switch (TaskIndex) {
+                    case 0:
+                        textView.setText(""+parent.getItemAtPosition(TaskIndex));
+                        break;
                     case 1:
-                        
+                        textView.setText(""+parent.getItemAtPosition(TaskIndex));
                         break;
                     case 2:
-
+                        textView.setText(""+parent.getItemAtPosition(TaskIndex));
                         break;
                     case 3:
-
+                        textView.setText(""+parent.getItemAtPosition(TaskIndex));
                         break;
-                    case 4:
-
+                    case  4:
+                        textView.setText(""+parent.getItemAtPosition(TaskIndex));
                         break;
-
-                    case  5:
-
+                    case 5:
+                        textView.setText(""+parent.getItemAtPosition(TaskIndex));
                         break;
-
                     case 6:
+                        textView.setText(""+parent.getItemAtPosition(TaskIndex));
                         break;
                 }
             }
@@ -53,7 +57,7 @@ public class NewReportActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.report_call_btn).setOnClickListener(callClickListener);
+
 
         findViewById(R.id.reporttask).setOnClickListener(r2ClickListener);
         findViewById(R.id.reportlog).setOnClickListener(r2ClickListener);
@@ -61,15 +65,8 @@ public class NewReportActivity extends AppCompatActivity {
         findViewById(R.id.reportmain).setOnClickListener(r2ClickListener);
         findViewById(R.id.reportfinfish).setOnClickListener(r2ClickListener);
     }
-    Spinner.OnClickListener callClickListener = new  View.OnClickListener(){
-        @Override
-        public void onClick(View view) {
-
-            textView = (TextView)findViewById(R.id.reportTextview1);
-        }
-    };
+    //버튼 실행부
     Button.OnClickListener r2ClickListener = new View.OnClickListener(){
-
         @Override
         public void onClick(View view) {
             switch (view.getId()){
