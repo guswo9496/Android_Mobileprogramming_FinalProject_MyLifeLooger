@@ -45,7 +45,12 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="360dp">
-
+            <TextView
+                android:id="@+id/maintextview1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceLarge"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -54,7 +59,7 @@
 
             <Button
                 android:onClick="onClick"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:id="@+id/finish"
                 android:text="finish this Final Project"/>

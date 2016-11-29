@@ -15,25 +15,31 @@
 
         <Button
             android:onClick="onClick"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="40dp"
             android:id="@+id/tasklog"
             android:text="log"/>
         <Button
             android:onClick="onClick"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="40dp"
             android:id="@+id/taskreport"
             android:text="report"/>
         <Button
             android:onClick="onClick"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="40dp"
             android:id="@+id/taskmap"
             android:text="map"/>
         <Button
             android:onClick="onClick"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:id="@+id/taskmain"
+            android:text="main"/>
+        <Button
+            android:onClick="onClick"
+            android:layout_width="80dp"
             android:layout_height="40dp"
             android:id="@+id/taskfinfish"
             android:text="finish"/>
@@ -61,12 +67,12 @@
             android:text="cancle"/>
 
         <Button
-            android:layout_width="110dp"
+            android:layout_width="50dp"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:id="@+id/taskbottombutton2"
             android:onClick="onClick"
-            android:text="taskpluse"/>
+            android:text="+"/>
     </LinearLayout>
 
     <LinearLayout

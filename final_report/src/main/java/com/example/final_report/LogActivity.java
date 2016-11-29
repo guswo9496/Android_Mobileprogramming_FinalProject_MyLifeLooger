@@ -1,5 +1,6 @@
 package com.example.final_report;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,12 +24,18 @@ public class LogActivity extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()) {
                 case R.id.logtask:
-                    break;
+                    Intent Log_intentT = new Intent(LogActivity.this,TaskActivity.class);
+                    startActivity(Log_intentT);
                 case R.id.logmap:
                     break;
                 case R.id.logreport:
-                    break;
+                    Intent Log_intentR = new Intent(LogActivity.this,ReportActivity.class);
+                    startActivity(Log_intentR);
+                case R.id.logmain:
+                    Intent Log_intentM = new Intent(LogActivity.this,MainActivity.class);
+                    startActivity(Log_intentM);
                 case R.id.logfinfish:
+                    finish();
                     break;
             }
         }

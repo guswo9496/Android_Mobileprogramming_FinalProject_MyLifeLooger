@@ -43,22 +43,28 @@
         android:layout_alignParentBottom="true">
         <Button
             android:onClick="onClick"
-            android:layout_width="wrap_content"
+            android:layout_width="65dp"
             android:layout_height="40dp"
             android:id="@+id/reporttask"
             android:text="task"/>
         <Button
             android:onClick="onClick"
-            android:layout_width="wrap_content"
+            android:layout_width="65dp"
             android:layout_height="40dp"
             android:id="@+id/reportlog"
             android:text="log"/>
         <Button
             android:onClick="onClick"
-            android:layout_width="wrap_content"
+            android:layout_width="65dp"
             android:layout_height="40dp"
             android:id="@+id/reportmap"
             android:text="map"/>
+        <Button
+            android:onClick="onClick"
+            android:layout_width="65dp"
+            android:layout_height="40dp"
+            android:id="@+id/reportmain"
+            android:text="main"/>
         <Button
             android:onClick="onClick"
             android:layout_width="wrap_content"

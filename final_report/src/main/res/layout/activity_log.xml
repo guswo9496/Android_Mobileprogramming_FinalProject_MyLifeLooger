@@ -31,7 +31,7 @@
         android:layout_alignParentBottom="true">
         <Button
             android:onClick="onClick"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="40dp"
             android:id="@+id/logtask"
             android:text="task"/>
@@ -43,10 +43,16 @@
             android:text="report"/>
         <Button
             android:onClick="onClick"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="40dp"
             android:id="@+id/logmap"
             android:text="map"/>
+        <Button
+            android:onClick="onClick"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:id="@+id/logmain"
+            android:text="main"/>
         <Button
             android:onClick="onClick"
             android:layout_width="wrap_content"

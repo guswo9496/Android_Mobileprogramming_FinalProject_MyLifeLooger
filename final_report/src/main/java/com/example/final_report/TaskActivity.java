@@ -1,7 +1,9 @@
 package com.example.final_report;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -23,6 +25,7 @@ public class TaskActivity extends AppCompatActivity {
         findViewById(R.id.tasklog).setOnClickListener(t2ClickListener);
         findViewById(R.id.taskreport).setOnClickListener(t2ClickListener);
         findViewById(R.id.taskmap).setOnClickListener(t2ClickListener);
+        findViewById(R.id.taskmain).setOnClickListener(t2ClickListener);
         findViewById(R.id.taskfinfish).setOnClickListener(t2ClickListener);
 
         /*findViewById(R.id.taskspinner1).setOnClickListener(t3ClickListener);*/
@@ -45,12 +48,22 @@ public class TaskActivity extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()){
                 case R.id.tasklog:
-                    break;
+                    Intent Task_intentLog = new Intent(TaskActivity.this, LogActivity.class);
+                    startActivity(Task_intentLog);
+
                 case  R.id.taskreport:
-                    break;
+                    Intent Task_intentReport = new Intent(TaskActivity.this, TaskActivity.class);
+                    startActivity(Task_intentReport);
+
                 case  R.id.taskmap:
+                   /* Intent Task_intentMap = new Intent(TaskActivity.this, MapsActivity.class);
+                    startActivity(Task_intentMap);*/
                     break;
+                case R.id.taskmain:
+                    Intent Task_main = new Intent(TaskActivity.this, MainActivity.class);
+                    startActivity(Task_main);
                 case R.id.taskfinfish:
+                    finish();
                     break;
             }
         }
