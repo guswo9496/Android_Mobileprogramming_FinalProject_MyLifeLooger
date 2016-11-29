@@ -41,14 +41,12 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
         <activity android:name=".LogActivity" />
-        <activity android:name=".ReportActivity"></activity>
-
-
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyCFodcR-ejsZJW8jywHUroeDI1yO0TDk9k" />
 
+        <activity android:name=".NewReportActivity"></activity>
     </application>
 
 </manifest>

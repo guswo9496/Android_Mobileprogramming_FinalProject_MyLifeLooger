@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="taskindex">
-        <item>[task pick]</item>
+        <!--<item>[]</item>-->
+
         <item>game</item>
         <item>move</item>
         <item>sleep</item>

@@ -20,25 +20,25 @@
                 android:onClick="onClick"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:id="@+id/task"
+                android:id="@+id/main_task_btn"
                 android:text="task"/>
             <Button
                 android:onClick="onClick"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:id="@+id/log"
+                android:id="@+id/main_log_btn"
                 android:text="log"/>
             <Button
                 android:onClick="onClick"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:id="@+id/map"
+                android:id="@+id/main_map_btn"
                 android:text="map"/>
             <Button
                 android:onClick="onClick"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:id="@+id/report"
+                android:id="@+id/main_report_btn"
                 android:text="report"/>
 
         </LinearLayout>
@@ -61,7 +61,7 @@
                 android:onClick="onClick"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/finish"
+                android:id="@+id/main_finish_btn"
                 android:text="finish this Final Project"/>
         </LinearLayout>
 
