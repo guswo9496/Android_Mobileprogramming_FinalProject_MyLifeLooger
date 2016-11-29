@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="taskindex">
+        <item>[task pick]</item>
+        <item>game</item>
+        <item>move</item>
+        <item>sleep</item>
+        <item>study</item>
+        <item>drink</item>
+        <item>book</item>
+    </string-array>
+</resources>
