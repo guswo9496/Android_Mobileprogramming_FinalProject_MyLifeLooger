@@ -1,15 +1,18 @@
 package com.example.final_report;
 
 import android.content.Intent;
+import android.database.DataSetObserver;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -18,6 +21,7 @@ import java.util.Arrays;
 public class TaskActivity extends AppCompatActivity {
     TaskActivity taskActivity = this;
     EditText editText;
+    Spinner spinner;
     TextView textViewSpinner_show;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +32,7 @@ public class TaskActivity extends AppCompatActivity {
 
         //스피너실행부
       final TextView tasktv =(TextView)findViewById(R.id.tasktextview1);
-        Spinner spinner =(Spinner)findViewById(R.id.taskspinner1);
+        spinner =(Spinner)findViewById(R.id.taskspinner1);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int TaskIndex, long id) {
@@ -85,7 +89,62 @@ public class TaskActivity extends AppCompatActivity {
         public void onClick(View view) {
             switch (view.getId()){
                 case R.id.taskbottombutton_add:
+                    spinner.setAdapter(new SpinnerAdapter() {
+                        @Override
+                        public View getDropDownView(int i, View view, ViewGroup viewGroup) {
+                            return null;
+                        }
 
+                        @Override
+                        public void registerDataSetObserver(DataSetObserver dataSetObserver) {
+
+                        }
+
+                        @Override
+                        public void unregisterDataSetObserver(DataSetObserver dataSetObserver) {
+
+                        }
+
+                        @Override
+                        public int getCount() {
+                            return 0;
+                        }
+
+                        @Override
+                        public Object getItem(int i) {
+                            return null;
+                        }
+
+                        @Override
+                        public long getItemId(int i) {
+                            return 0;
+                        }
+
+                        @Override
+                        public boolean hasStableIds() {
+                            return false;
+                        }
+
+                        @Override
+                        public View getView(int i, View view, ViewGroup viewGroup) {
+                            return null;
+                        }
+
+                        @Override
+                        public int getItemViewType(int i) {
+                            return 0;
+                        }
+
+                        @Override
+                        public int getViewTypeCount() {
+                            return 0;
+                        }
+
+                        @Override
+                        public boolean isEmpty() {
+                            return false;
+                        }
+                    });
                     break;
                 case R.id.taskbottombutton_Cancle:
                     break;
