@@ -79,6 +79,8 @@ public class NewReportActivity extends AppCompatActivity {
                     startActivity(Report_intentL);
                     break;
                 case R.id.reportmap:
+                    Intent maps_intentL = new Intent(newReportActivity,MapsActivity.class);
+                    startActivity(maps_intentL);
                     break;
                 case R.id.reportmain:
                     Intent Report_intentMain = new Intent(newReportActivity,MainActivity.class);

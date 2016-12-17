@@ -36,11 +36,17 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(main_Log_Intent);
                     break;
                 case R.id.main_map_btn:
+                    Intent main_map = new Intent(mainActivity,MapsActivity.class);
+                    startActivity(main_map);
                     break;
 
                 case R.id.main_report_btn:
                     Intent main_Report_Intent = new Intent(mainActivity,NewReportActivity.class);
                     startActivity(main_Report_Intent);
+                    break;
+                case R.id.main_camera_btn:
+                    Intent main_c = new Intent(mainActivity,CameraActivity.class);
+                    startActivity(main_c);
                     break;
                 case R.id.main_finish_btn:
                     moveTaskToBack(true);

@@ -31,7 +31,7 @@ public class TaskActivity extends AppCompatActivity {
         textViewSpinner_show=(TextView)findViewById(R.id.task_spinner_ShowTextview);
 
         //스피너실행부
-      final TextView tasktv =(TextView)findViewById(R.id.tasktextview1);
+        final TextView tasktv =(TextView)findViewById(R.id.tasktextview1);
         spinner =(Spinner)findViewById(R.id.taskspinner1);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -165,6 +165,8 @@ public class TaskActivity extends AppCompatActivity {
                     startActivity(Task_intentReport);
                     break;
                 case  R.id.taskmap:
+                    Intent Task_maps = new Intent(taskActivity, MapsActivity.class);
+                    startActivity(Task_maps);
                     break;
                 case R.id.taskmain:
                     Intent Task_main = new Intent(taskActivity, MainActivity.class);

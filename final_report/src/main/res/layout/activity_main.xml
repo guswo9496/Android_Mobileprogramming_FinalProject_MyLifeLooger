@@ -12,32 +12,32 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/activity_horizontal_margin">
             <Button
                 android:onClick="onClick"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/main_task_btn"
                 android:text="task"/>
             <Button
                 android:onClick="onClick"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/main_log_btn"
                 android:text="log"/>
             <Button
                 android:onClick="onClick"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_width="75dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/main_map_btn"
                 android:text="map"/>
             <Button
                 android:onClick="onClick"
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/main_report_btn"
                 android:text="report"/>
 
@@ -58,11 +58,20 @@
             android:orientation="horizontal">
 
             <Button
+              android:onClick="onClick"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:id="@+id/main_camera_btn"
+              android:text="camer"
+              android:layout_weight="1"/>
+
+            <Button
                 android:onClick="onClick"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:id="@+id/main_finish_btn"
                 android:text="finish this Final Project"/>
+
         </LinearLayout>
 
     </LinearLayout>

@@ -11,50 +11,14 @@
     tools:context="com.example.final_report.LogActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true">
-        <Button
-            android:onClick="onClick"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:id="@+id/logtask"
-            android:text="task"/>
-        <Button
-            android:onClick="onClick"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:id="@+id/logreport"
-            android:text="report"/>
-        <Button
-            android:onClick="onClick"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:id="@+id/logmap"
-            android:text="map"/>
-        <Button
-            android:onClick="onClick"
-            android:layout_width="60dp"
-            android:layout_height="40dp"
-            android:id="@+id/logmain"
-            android:text="main"/>
-        <Button
-            android:onClick="onClick"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:id="@+id/logfinfish"
-            android:text="preview"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="43dp"
-        android:layout_height="380dp">
+      android:layout_width="match_parent"
+      android:layout_alignParentStart="true"
+      android:layout_marginTop="43dp"
+      android:layout_height="330dp">
         <TextView
             android:id="@+id/logtextview1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="329dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -74,5 +38,67 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/taskindex"></Spinner>
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_centerHorizontal="true"
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:layout_above="@+id/linearLayout5"
+      android:layout_alignParentStart="true"
+      android:orientation="horizontal">
+        <Button
+          android:onClick="onClick"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:id="@+id/logtask"
+          android:text="task"
+          android:layout_weight="0.1"/>
+
+        <Button
+          android:onClick="onClick"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:id="@+id/logmap"
+          android:text="map"
+          android:layout_weight="0.1"/>
+
+        <Button
+          android:onClick="onClick"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:id="@+id/logmain"
+          android:text="main"
+          android:layout_weight="0.1"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:orientation="horizontal"
+      android:id="@+id/linearLayout5"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentStart="true"
+      android:weightSum="1">
+
+
+        <Button
+          android:onClick="onClick"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:id="@+id/logreport"
+          android:text="report"
+          android:layout_weight="0.5"/>
+
+        <Button
+          android:onClick="onClick"
+          android:layout_width="138dp"
+          android:layout_height="40dp"
+          android:id="@+id/logfinfish"
+          android:text="preview"
+          android:layout_weight="0.5"/>
+
     </LinearLayout>
 </RelativeLayout>

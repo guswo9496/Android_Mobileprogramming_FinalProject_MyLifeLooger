@@ -19,12 +19,7 @@
             android:layout_height="40dp"
             android:id="@+id/tasklog"
             android:text="log"/>
-        <Button
-            android:onClick="onClick"
-            android:layout_width="80dp"
-            android:layout_height="40dp"
-            android:id="@+id/taskreport"
-            android:text="report"/>
+
         <Button
             android:onClick="onClick"
             android:layout_width="60dp"
@@ -37,6 +32,14 @@
             android:layout_height="40dp"
             android:id="@+id/taskmain"
             android:text="main"/>
+
+        <Button
+            android:onClick="onClick"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:id="@+id/taskreport"
+            android:text="rep"/>
+
         <Button
             android:onClick="onClick"
             android:layout_width="90dp"
@@ -98,15 +101,23 @@
             android:entries="@array/taskindex"></Spinner>
 
     </LinearLayout>
+
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/linearLayout"
-        android:layout_below="@+id/linearLayout4">
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@+id/linearLayout4"
+      android:layout_alignParentStart="true"
+      android:layout_above="@+id/linearLayout"
+      android:orientation="horizontal">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:id="@+id/task_spinner_ShowTextview"
             android:textSize="15dp"/>
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="3dip"
+          android:background="#ffffff"/>
     </LinearLayout>
 </RelativeLayout>

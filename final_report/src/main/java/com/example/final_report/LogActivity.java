@@ -64,7 +64,6 @@ public class LogActivity extends AppCompatActivity {
     }
     //log의 메인 버튼 실행
     Button.OnClickListener L1ClickListener = new View.OnClickListener(){
-
         @Override
         public void onClick(View view) {
             switch (view.getId()) {
@@ -73,6 +72,8 @@ public class LogActivity extends AppCompatActivity {
                     startActivity(Log_intentT);
                     break;
                 case R.id.logmap:
+                    Intent Log_map = new Intent(logActivity,MapsActivity.class);
+                    startActivity(Log_map);
                     break;
                 case R.id.logreport:
                     Intent Log_intentR = new Intent(logActivity,NewReportActivity.class);

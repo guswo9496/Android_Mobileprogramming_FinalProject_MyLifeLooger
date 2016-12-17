@@ -28,25 +28,25 @@
         android:id="@+id/linearLayout3">
         <Button
             android:onClick="onClick"
-            android:layout_width="65dp"
+            android:layout_width="60dp"
             android:layout_height="40dp"
             android:id="@+id/reporttask"
             android:text="task"/>
         <Button
             android:onClick="onClick"
-            android:layout_width="65dp"
+            android:layout_width="60dp"
             android:layout_height="40dp"
             android:id="@+id/reportlog"
             android:text="log"/>
         <Button
             android:onClick="onClick"
-            android:layout_width="65dp"
+            android:layout_width="60dp"
             android:layout_height="40dp"
             android:id="@+id/reportmap"
             android:text="map"/>
         <Button
             android:onClick="onClick"
-            android:layout_width="65dp"
+            android:layout_width="60dp"
             android:layout_height="40dp"
             android:id="@+id/reportmain"
             android:text="main"/>

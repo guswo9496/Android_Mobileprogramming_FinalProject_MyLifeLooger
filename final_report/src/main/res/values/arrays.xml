@@ -2,7 +2,7 @@
 <resources>
     <string-array name="taskindex">
         <!--<item>[]</item>-->
-
+        <item>TaskName</item>
         <item>game</item>
         <item>move</item>
         <item>sleep</item>
