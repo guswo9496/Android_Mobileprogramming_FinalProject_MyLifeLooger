@@ -10,18 +10,34 @@ import android.widget.ImageView;
 
 public class CameraActivity extends AppCompatActivity {
 
-  Button button;
-  ImageView imageView = null;
+  Button btn;
+  ImageView iv = null;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_camera);
-
-
     findViewById(R.id.carmere_btn_preciew).setOnClickListener(mainClickListener);
-
     setup();
+  }
+  private void setup()
+  {
+    btn = (Button)findViewById(R.id.btn);
+    iv = (ImageView)findViewById(R.id.iv);
+    btn.setOnClickListener(new View.OnClickListener()
+    {
+      @Override
+      public void onClick(View v)
+      {
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivity(intent);
+      }
+    });
+  }
+  @Override
+  protected void onActivityResult(int requestCode, int resultCode, Intent data)
+  {
+    iv.setImageURI(data.getData());
   }
 
   Button.OnClickListener mainClickListener = new View.OnClickListener() {
@@ -35,25 +51,5 @@ public class CameraActivity extends AppCompatActivity {
       }
     }
   };
-
-
-  private void setup() {
-    button = (Button) findViewById(R.id.carmerebtn);
-    imageView = (ImageView) findViewById(R.id.ImageView1);
-
-    button.setOnClickListener(new View.OnClickListener() {
-
-      @Override
-      public void onClick(View view) {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        startActivityForResult(intent, 1);
-      }
-    });
-  }
-
-  @Override
-  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-    imageView.setImageURI(data.getData());
-  }
 }
 

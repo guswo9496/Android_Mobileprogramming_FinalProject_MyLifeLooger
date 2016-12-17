@@ -14,6 +14,7 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.SpinnerAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -23,11 +24,21 @@ public class TaskActivity extends AppCompatActivity {
     EditText editText;
     Spinner spinner;
     TextView textViewSpinner_show;
+    TextView textViewSpinner_show2;
+   int time =0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task);
 
+        editText = (EditText) findViewById(R.id.add_Task);
+        findViewById(R.id.taskbottombutton_add).setOnClickListener(t1ClickListener);
+        findViewById(R.id.taskbottombutton_Cancle).setOnClickListener(t1ClickListener);
+        findViewById(R.id.tasklog).setOnClickListener(t2ClickListener);
+        findViewById(R.id.taskreport).setOnClickListener(t2ClickListener);
+        findViewById(R.id.taskmap).setOnClickListener(t2ClickListener);
+        findViewById(R.id.taskmain).setOnClickListener(t2ClickListener);
+        findViewById(R.id.taskfinfish).setOnClickListener(t2ClickListener);
         textViewSpinner_show=(TextView)findViewById(R.id.task_spinner_ShowTextview);
 
         //스피너실행부
@@ -43,21 +54,72 @@ public class TaskActivity extends AppCompatActivity {
                         break;
                     case 1:
                         textViewSpinner_show.setText(""+parent.getItemAtPosition(TaskIndex));
+                        Intent stopwatch = new Intent(taskActivity,StopWatch.class);
+                        startActivityForResult(stopwatch,time);
                         break;
                     case 2:
                         textViewSpinner_show.setText(""+parent.getItemAtPosition(TaskIndex));
+                        Intent stopwatch1 = new Intent(taskActivity,StopWatch.class);
+                        startActivityForResult(stopwatch1,time);
                         break;
                     case 3:
                         textViewSpinner_show.setText(""+parent.getItemAtPosition(TaskIndex));
+                        Intent stopwatch2 = new Intent(taskActivity,StopWatch.class);
+                        startActivityForResult(stopwatch2,time);
                         break;
                     case 4:
                         textViewSpinner_show.setText(""+parent.getItemAtPosition(TaskIndex));
+                        Intent stopwatch3 = new Intent(taskActivity,StopWatch.class);
+                        startActivityForResult(stopwatch3,time);
                         break;
                     case  5:
                         textViewSpinner_show.setText(""+parent.getItemAtPosition(TaskIndex));
+                        Intent stopwatch4 = new Intent(taskActivity,StopWatch.class);
+                        startActivityForResult(stopwatch4,time);
                         break;
                     case 6:
                         textViewSpinner_show.setText(""+parent.getItemAtPosition(TaskIndex));
+                        Intent stopwatch5 = new Intent(taskActivity,StopWatch.class);
+                        startActivityForResult(stopwatch5,time);
+                        break;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+
+        });
+
+        textViewSpinner_show2 =(TextView)findViewById(R.id.task_spinner_ShowTextview2);
+        final TextView tasktv2 =(TextView)findViewById(R.id.tasktextView2);
+        spinner =(Spinner)findViewById(R.id.taskspinner2);
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int TaskIndex, long id) {
+                tasktv2.setText("Task List : ");
+                switch (TaskIndex) {
+                    case 0:
+                        textViewSpinner_show2.setText(""+parent.getItemAtPosition(TaskIndex));
+                        break;
+                    case 1:
+                        textViewSpinner_show2.setText(""+parent.getItemAtPosition(TaskIndex));
+                        break;
+                    case 2:
+                        textViewSpinner_show2.setText(""+parent.getItemAtPosition(TaskIndex));
+                        break;
+                    case 3:
+                        textViewSpinner_show2.setText(""+parent.getItemAtPosition(TaskIndex));
+                        break;
+                    case 4:
+                        textViewSpinner_show2.setText(""+parent.getItemAtPosition(TaskIndex));
+                        break;
+                    case  5:
+                        textViewSpinner_show2.setText(""+parent.getItemAtPosition(TaskIndex));
+                        break;
+                    case 6:
+                        textViewSpinner_show2.setText(""+parent.getItemAtPosition(TaskIndex));
                         break;
                 }
             }
@@ -68,19 +130,18 @@ public class TaskActivity extends AppCompatActivity {
             }
         });
 
-
-        editText = (EditText) findViewById(R.id.add_Task);
-
-
-        findViewById(R.id.taskbottombutton_add).setOnClickListener(t1ClickListener);
-        findViewById(R.id.taskbottombutton_Cancle).setOnClickListener(t1ClickListener);
-
-        findViewById(R.id.tasklog).setOnClickListener(t2ClickListener);
-        findViewById(R.id.taskreport).setOnClickListener(t2ClickListener);
-        findViewById(R.id.taskmap).setOnClickListener(t2ClickListener);
-        findViewById(R.id.taskmain).setOnClickListener(t2ClickListener);
-        findViewById(R.id.taskfinfish).setOnClickListener(t2ClickListener);
         }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode!=RESULT_OK){
+            finish();
+        }
+        if(requestCode == RESULT_OK){
+            String resultMsg = String.valueOf(data.getStringArrayExtra(String.valueOf(data)));
+            textViewSpinner_show.setText(resultMsg);
+        }
+    }
         //임무추가버튼 실행부->스피너의arrays에 저장하나 저장구조는 tree
        /* ArrayList<String> entries = new ArrayList<String>(Arrays.asList(""));
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,R.layout.mr_chooser_list_item,entries);*/

@@ -41,40 +41,6 @@
     </LinearLayout>
 
     <LinearLayout
-      android:layout_centerHorizontal="true"
-      android:layout_width="match_parent"
-      android:layout_height="50dp"
-      android:layout_above="@+id/linearLayout5"
-      android:layout_alignParentStart="true"
-      android:orientation="horizontal">
-        <Button
-          android:onClick="onClick"
-          android:layout_width="wrap_content"
-          android:layout_height="40dp"
-          android:id="@+id/logtask"
-          android:text="task"
-          android:layout_weight="0.1"/>
-
-        <Button
-          android:onClick="onClick"
-          android:layout_width="wrap_content"
-          android:layout_height="40dp"
-          android:id="@+id/logmap"
-          android:text="map"
-          android:layout_weight="0.1"/>
-
-        <Button
-          android:onClick="onClick"
-          android:layout_width="wrap_content"
-          android:layout_height="40dp"
-          android:id="@+id/logmain"
-          android:text="main"
-          android:layout_weight="0.1"/>
-
-
-    </LinearLayout>
-
-    <LinearLayout
       android:layout_width="match_parent"
       android:layout_height="50dp"
       android:orientation="horizontal"
@@ -99,6 +65,39 @@
           android:id="@+id/logfinfish"
           android:text="preview"
           android:layout_weight="0.5"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="50dp"
+      android:orientation="horizontal"
+      android:layout_above="@+id/linearLayout5"
+      android:layout_alignParentStart="true">
+        <Button
+          android:onClick="onClick"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:id="@+id/logtask"
+          android:text="task"
+          android:layout_weight="0.1"/>
+
+        <Button
+          android:onClick="onClick"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:id="@+id/logmain"
+          android:text="main"
+          android:layout_weight="0.1"/>
+
+        <Button
+          android:onClick="onClick"
+          android:layout_width="wrap_content"
+          android:layout_height="40dp"
+          android:id="@+id/logmap"
+          android:text="map"
+          android:layout_weight="0.1"/>
+
 
     </LinearLayout>
 </RelativeLayout>
