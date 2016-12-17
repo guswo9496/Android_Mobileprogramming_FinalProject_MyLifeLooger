@@ -43,7 +43,6 @@ public class StopWatch extends AppCompatActivity {
     // TODO Auto-generated method stub
     super.onDestroy();
   }
-
   public void myOnClick(View v){
     switch(v.getId()){
       case R.id.btn_start: //시작버튼을 클릭했을때 현재 상태값에 따라 다른 동작을 할수있게끔 구현.
@@ -72,8 +71,6 @@ public class StopWatch extends AppCompatActivity {
             myBtnRec.setText("기록");
             cur_Status = Run;
             break;
-
-
         }
         break;
       case R.id.btn_rec:
@@ -104,7 +101,6 @@ public class StopWatch extends AppCompatActivity {
 
     }
   }
-
   Handler myTimer = new Handler(){
     public void handleMessage(Message msg){
       myOutput.setText(getTimeOut());
@@ -119,8 +115,6 @@ public class StopWatch extends AppCompatActivity {
     String easy_outTime = String.format("%02d:%02d:%02d", outTime/1000 / 60, (outTime/1000)%60,(outTime%1000)/10);
     tim=easy_outTime;
     return easy_outTime;
-
-
   }
   Button.OnClickListener backtotaskClickListener = new View.OnClickListener(){
     @Override
